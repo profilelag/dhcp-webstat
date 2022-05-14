@@ -20,9 +20,10 @@ app.post("/login", json(), async(req, res) => {
 	else res.end(JSON.stringify({ status: output.status, response: "Something went wrong." }));
 });
 
-if (using_https) {
+if (using_https)
 	createServer({
 		key: readFileSync("keys/key.pem"),
 		cert: readFileSync("keys/cert.pem"),
 	}, app).listen(443);
-} else app.listen(http_port);
+else
+	app.listen(http_port);
