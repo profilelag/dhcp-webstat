@@ -1,9 +1,8 @@
-const express = require("express");
-const app = express();
-const { createServer } = require("https");
-const { json } = require("body-parser");
-const { readFileSync } = require("fs");
-const { spawnSync } = require("child_process");
+const app = require('express')();
+const { createServer } = require('https');
+const { json } = require('body-parser');
+const { readFileSync } = require('fs');
+const { spawnSync } = require('child_process');
 
 const using_https = true,
 	http_port = 8080;
